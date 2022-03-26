@@ -399,7 +399,7 @@
 		if (params.length == 0) var url = baseUrl;
 		else var url = baseUrl + '?' + params.join('&');
 		
-		prompt('URL should be copied to clipboard if you are on PC. If you are on mobile device, copy the URL here: ',url);
+		//prompt('URL should be copied to clipboard if you are on PC. If you are on mobile device, copy the URL here: ',url);
 		
 		 document.getElementById("myInput").value=url;
 		 document.getElementById("myInput2").value=url;
@@ -411,6 +411,9 @@
 
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(copyText.value);
+  
+   /* Alert the copied text */
+  alert("Copied the new URL: " + copyText.value);
 	}
 		
     function clearFields() {
@@ -814,7 +817,7 @@
 			<tr><td align="center">
 				<input type=button value="Clear Fields" onClick="clearFields()" 
 					style="font-size:18px; text-align:center;">&nbsp;&nbsp;&nbsp;
-				<input type=button value="Click to Copy New URL" title="Click to Copy New URL" onClick="saveData()" 
+				<input type=button value="Click to Copy New URL" title="Click to Copy New URL" onmouseup="saveData()" 
 					style="font-size:18px; text-align:center;">
 					<br>
 				<input type="text" value="New URL Will Appear Here" id="myInput"
