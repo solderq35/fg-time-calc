@@ -402,7 +402,7 @@
 		//prompt('URL should be copied to clipboard if you are on PC. If you are on mobile device, copy the URL here: ',url);
 		
 		   /* Alert the copied text */
-  alert("Copied the new URL: " + url);
+  alert("Link Copied to Clipboard");
 		
 		 document.getElementById("myInput").value=url;
 		 document.getElementById("myInput2").value=url;
@@ -414,8 +414,25 @@
 
 
   /* Copy the text inside the text field */
-  navigator.clipboard.writeText(url);
-  
+  //navigator.clipboard.writeText(url);
+   var oldContentEditable = myInput.contentEditable,
+        oldReadOnly = myInput.readOnly,
+        range = document.createRange();
+
+    myInput.contentEditable = true;
+    myInput.readOnly = false;
+    range.selectNodeContents(myInput);
+
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(range);
+
+    myInput.setSelectionRange(0, 999999); // A big number, to cover anything that could be inside the element.
+
+    myInput.contentEditable = oldContentEditable;
+    myInput.readOnly = oldReadOnly;
+
+    document.execCommand('copy');
 
 	}
 		
@@ -820,10 +837,10 @@
 			<tr><td align="center">
 				<input type=button value="Clear Fields" onClick="clearFields()" 
 					style="font-size:18px; text-align:center;">&nbsp;&nbsp;&nbsp;
-				<input type=button value="Click to Copy New URL" title="Click to Copy New URL" onClick="saveData()" 
+				<input type=button value="Save Data as Link" title="Save Data as Link" onClick="saveData()" 
 					style="font-size:18px; text-align:center;">
 					<br>
-				<input type="text" value="New URL Will Appear Here" id="myInput"
+				<input type="text" value="Link Will Appear Here" id="myInput"
 														
 					style="font-size:16px; text-align:center;">
 					<br>
@@ -1272,10 +1289,10 @@
 			
 			<input type=button value="Clear Fields" onClick="clearFields()" class="noprint"
 				style="font-size:18px; text-align:center;">&nbsp;&nbsp;&nbsp;
-			<input type=button value="Click to Copy New URL" title="Click to Copy New URL" onClick="saveData()" 
+			<input type=button value="Save Data as Link" title="Save Data as Link" onClick="saveData()" 
 				style="font-size:18px; text-align:center;">
 			<br>
-			<input type="text" value="New URL Will Appear Here" id="myInput2"
+			<input type="text" value="Link Will Appear Here" id="myInput2"
 				style="font-size:16px; text-align:center;">
 			<br/>
 		
