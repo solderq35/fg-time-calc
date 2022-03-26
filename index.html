@@ -398,7 +398,18 @@
 		
 		if (params.length == 0) var url = baseUrl;
 		else var url = baseUrl + '?' + params.join('&');
-		prompt('Press Ctrl + C to copy the new URL',url);
+		 document.getElementById("myInput").value=url;
+		//prompt('Press Ctrl + C to copy the new URL',url);
+		  var copyText = document.getElementById("myInput");
+		 /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+  
+  /* Alert the copied text */
+  alert("Copied the new URL: " + copyText.value);
 	}
 		
     function clearFields() {
@@ -802,7 +813,10 @@
 			<tr><td align="center">
 				<input type=button value="Clear Fields" onClick="clearFields()" 
 					style="font-size:18px; text-align:center;">&nbsp;&nbsp;&nbsp;
-				<input type=button value="Save Data as New URL" title="Save Data as New URL" onClick="saveData()" 
+				<input type=button value="Click to Copy New URL" title="Click to Copy New URL" onClick="saveData()" 
+					style="font-size:18px; text-align:center;">
+					<br>
+				<input type="text" value="New URL Will Appear Here" id="myInput"
 					style="font-size:18px; text-align:center;">
 				<br/>Mode: 
 				<input type="radio" name="plusMinusMode" id="plusMode" value=0 checked onclick="changeMode()"><label for="plusMode">add values</label>,&nbsp;&nbsp;
@@ -1248,7 +1262,10 @@
 			
 			<input type=button value="Clear Fields" onClick="clearFields()" class="noprint"
 				style="font-size:18px; text-align:center;">&nbsp;&nbsp;&nbsp;
-			<input type=button value="Save Data as New URL" title="Save Data as New URL" onClick="saveData()" 
+			<input type=button value="Click to Copy New URL" title="Click to Copy New URL" onClick="saveData()" 
+				style="font-size:18px; text-align:center;">
+			<br>
+			<input type="text" value="New URL Will Appear Here" id="myInput"
 				style="font-size:18px; text-align:center;">
 			<br/>
 		
