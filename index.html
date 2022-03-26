@@ -414,8 +414,25 @@
 
 
   /* Copy the text inside the text field */
-  navigator.clipboard.writeText(url);
-  
+  //navigator.clipboard.writeText(url);
+   var oldContentEditable = myInput.contentEditable,
+        oldReadOnly = myInput.readOnly,
+        range = document.createRange();
+
+    myInput.contentEditable = true;
+    myInput.readOnly = false;
+    range.selectNodeContents(myInput);
+
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(range);
+
+    myInput.setSelectionRange(0, 999999); // A big number, to cover anything that could be inside the element.
+
+    myInput.contentEditable = oldContentEditable;
+    myInput.readOnly = oldReadOnly;
+
+    document.execCommand('copy');
 
 	}
 		
