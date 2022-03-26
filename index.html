@@ -399,7 +399,7 @@
 		if (params.length == 0) var url = baseUrl;
 		else var url = baseUrl + '?' + params.join('&');
 		
-		prompt('URL should be copied to clipboard if you are on PC. If you are on mobile device, copy the URL here: ',url);
+		//prompt('URL should be copied to clipboard if you are on PC. If you are on mobile device, copy the URL here: ',url);
 		
 		 document.getElementById("myInput").value=url;
 		 document.getElementById("myInput2").value=url;
@@ -411,6 +411,13 @@
 
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(copyText.value);
+  
+    const input = document.getElementById('myInput');
+  input.focus();
+  input.select();
+  
+   /* Alert the copied text */
+  alert("Copied the new URL: " + copyText.value);
 	}
 		
     function clearFields() {
