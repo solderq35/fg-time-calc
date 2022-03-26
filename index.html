@@ -399,6 +399,7 @@
 		if (params.length == 0) var url = baseUrl;
 		else var url = baseUrl + '?' + params.join('&');
 		 document.getElementById("myInput").value=url;
+		 document.getElementById("myInput2").value=url;
 		//prompt('Press Ctrl + C to copy the new URL',url);
 		  var copyText = document.getElementById("myInput");
 		 /* Select the text field */
@@ -409,7 +410,8 @@
   navigator.clipboard.writeText(copyText.value);
   
   /* Alert the copied text */
-  alert("Copied the new URL: " + copyText.value);
+  document.getElementById("mobiled").style.display = "block"; 
+  //alert("Copied the new URL: " + copyText.value);
 	}
 		
     function clearFields() {
@@ -817,7 +819,12 @@
 					style="font-size:18px; text-align:center;">
 					<br>
 				<input type="text" value="New URL Will Appear Here" id="myInput"
-					style="font-size:18px; text-align:center;">
+														
+					style="font-size:16px; text-align:center;">
+					<br>
+					<div id="mobiled" style="display: none; font-size:16px; margin-top:10px;">
+									URL Copied!
+									</div>
 				<br/>Mode: 
 				<input type="radio" name="plusMinusMode" id="plusMode" value=0 checked onclick="changeMode()"><label for="plusMode">add values</label>,&nbsp;&nbsp;
 				<input type="radio" name="plusMinusMode" id="minusMode" value=1 onclick="changeMode()"><label for="minusMode">subtract values</label>
@@ -1265,9 +1272,12 @@
 			<input type=button value="Click to Copy New URL" title="Click to Copy New URL" onClick="saveData()" 
 				style="font-size:18px; text-align:center;">
 			<br>
-			<input type="text" value="New URL Will Appear Here" id="myInput"
-				style="font-size:18px; text-align:center;">
+			<input type="text" value="New URL Will Appear Here" id="myInput2"
+				style="font-size:16px; text-align:center;">
 			<br/>
+			<div style="font-size:16px; margin-top:10px;">
+				On mobile, you may need to manually copy the text above.
+			</div>
 		
 		<font face="Comic Sans MS" color=slateblue class="noprint" >Have a nice day!</font>
 			
