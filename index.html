@@ -401,6 +401,9 @@
 		
 		//prompt('URL should be copied to clipboard if you are on PC. If you are on mobile device, copy the URL here: ',url);
 		
+		   /* Alert the copied text */
+  alert("Copied the new URL: " + url);
+		
 		 document.getElementById("myInput").value=url;
 		 document.getElementById("myInput2").value=url;
 		
@@ -409,15 +412,11 @@
   copyText.select();
   copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
+
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(copyText.value);
   
-    const input = document.getElementById('myInput');
-  input.focus();
-  input.select();
-  
-   /* Alert the copied text */
-  alert("Copied the new URL: " + copyText.value);
+
 	}
 		
     function clearFields() {
