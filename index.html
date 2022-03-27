@@ -826,6 +826,13 @@
 
 					<br>
 					<strong> All rights go to <a href="mailto:smith_gordon@bah.com?subject=timeCalculator">Grun</a>.</strong>
+					<br>
+					<br>
+					<strong> Improvements to the "Save <br>
+					Link As" section 
+					made by  <a href="https://solderq35.github.io/">Solderq35</a>.
+					
+					</strong>
 						
 					</div>
 					<div style="text-align:left; color:#CC0000;">
@@ -889,11 +896,7 @@
 						Hr/Min/Sec/Frame separator: 
 						<input type=text name="timeSeparator" value=":" size=1 onChange="addTimes()" style="text-align: center;"><br>
 						For fractions of a second, use a decimal point,<br/>
-						For frames, use <input type="text" name="fps" value='' size=3 onChange="changeFps(this)"> frames per second<br/><br/>
-						This web page does not require the internet.<br/>
-						You can save this web page to your computer<br/>
-						and run it anytime in your browser<br/>
-						(but check back for updates)
+						For frames, use <input type="text" name="fps" value='' size=3 onChange="changeFps(this)"> frames per second.<br/><br/>
 						</font>
 			</td></tr>
 		</table><br>
@@ -930,13 +933,20 @@
 		</table><br/>
 
 		
-
+<input type=button value="Clear Fields" onClick="clearFields()" 
+					style="font-size:18px; text-align:center;">&nbsp;&nbsp;&nbsp;
+				<input type=button value="Save Data as Link" title="Save Data as Link" onClick="saveData()" 
+					style="font-size:18px; text-align:center;">
+					<br>
+				<input type="text" value="Link Will Appear Here" id="myInput"
+														
+					style="font-size:16px; text-align:center;">
+					<br>
 		<font size=-1 color=#9C3119 face="verdana, arial, helvetica">
 			You DO NOT need to fill in all rows</font><br>
-		<font size=-1 face="verdana, arial, helvetica">
-			Send comments to: <a href="mailto:smith_gordon@bah.com?subject=timeCalculator">Grun</a>
 		</font><p>
 	</div>
+	
 	
 	
 	
