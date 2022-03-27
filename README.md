@@ -1,2 +1,5 @@
 # fg-time-calc
-Clone of Grun1's time calculator (http://www.grun1.com/utils/timeCalc.html) hosted on own domain
+Improved Version of Grun1's Time Calculator (http://www.grun1.com/utils/timeCalc.html). 
+
+### Improvements So Far
+- Can now save URL with one click (on both Desktop and Mobile browsers).

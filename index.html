@@ -402,19 +402,20 @@
 		//prompt('URL should be copied to clipboard if you are on PC. If you are on mobile device, copy the URL here: ',url);
 		
 		   /* Alert the copied text */
-  alert("Link Copied to Clipboard");
+	alert("Link Copied to Clipboard");
 		
 		 document.getElementById("myInput").value=url;
 		 document.getElementById("myInput2").value=url;
+		 document.getElementById("myInput3").value=url;
 		
 		  var copyText = document.getElementById("myInput");
 		 /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+	copyText.select();
+	copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
-
-  /* Copy the text inside the text field */
   //navigator.clipboard.writeText(url);
+  
+  /* Copy Data (longer to work on mobile) */
    var oldContentEditable = myInput.contentEditable,
         oldReadOnly = myInput.readOnly,
         range = document.createRange();
@@ -938,7 +939,7 @@
 				<input type=button value="Save Data as Link" title="Save Data as Link" onClick="saveData()" 
 					style="font-size:18px; text-align:center;">
 					<br>
-				<input type="text" value="Link Will Appear Here" id="myInput"
+				<input type="text" value="Link Will Appear Here" id="myInput3"
 														
 					style="font-size:16px; text-align:center;">
 					<br>
