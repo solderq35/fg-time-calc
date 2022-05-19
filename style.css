@@ -1,0 +1,52 @@
+@media print 
+{
+	.noprint { display:none; }
+	.printOnly { }
+	BODY { background-image:none; margin:0px;}
+}
+		
+@media screen 
+{
+	.noprint { }
+	.printOnly { display:none; }
+	BODY { background-image:none; margin:0px;}
+}
+		
+INPUT
+{
+	font-size: 12px;
+	text-align:right;
+}
+		
+.threeD 
+{
+	border-left:1px solid black;
+	border-top:1px solid black;
+	border-right:2px solid black;
+	border-bottom:2px solid black;
+}
+
+.comment
+{
+	color: dimgray;
+}
+		
+.cumtime 
+{
+	background-color: whitesmoke;
+}
+		
+.comments 
+{
+	text-align: left;
+}
+		
+a 
+{
+	color: blue;
+}
+		
+td 
+{
+	font-family:Arial; font-size:12pt
+}
