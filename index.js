@@ -297,7 +297,7 @@
 	
 	function saveData() {
 		var params = [];
-		for (i=1; i<=40; i++) {
+		for (i=1; i<=50; i++) {
 			// Save times
 			val = eval('document.timeCalc.time'+i+'.value');
 			if (val != '') {		//  && !isNaN(val)
@@ -387,10 +387,10 @@
 	}
 		
     function clearFields() {
-		for (i=1; i<=40; i++) {
+		for (i=1; i<=50; i++) {
 			eval('document.timeCalc.time'+i+'.value = ""');
 		}
-		for (i=1; i<=40; i++) {
+		for (i=1; i<=50; i++) {
 			eval('document.timeCalc.cumtime'+i+'.value = ""');
 			eval('document.timeCalc.comments'+i+'.value = ""');
 		}
@@ -504,7 +504,7 @@
 		}
 		
 		
-		for (i=1; i<=40; i++){
+		for (i=1; i<=50; i++){
 			myValue = eval('document.timeCalc.time'+i+'.value');
 			seconds = origSeconds = stringToSeconds(myValue);
 			frames = origFrames = stringToFrames(myValue);
