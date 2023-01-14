@@ -25,4 +25,4 @@ Disclaimer: The codebase is heavily based on Grun1's original site: http://www.g
 Usage: Enter times into input field, a running total of your total time is calculated. Use the format minutes:seconds for each level.
 
 Example Screenshot:
-![Example SS](https://media.discordapp.net/attachments/1029540810800255067/1063625723430051953/image.png)
+![Example SS](https://media.discordapp.net/attachments/1018323831468851202/1063729160297664553/image.png?width=898&height=670)
