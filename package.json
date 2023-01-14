@@ -1,0 +1,23 @@
+{
+  "name": "fg-time-calc",
+  "version": "1.0.0",
+  "description": "Tool for adding up level completion times for full game runs, **with an estimated 20 regular users among the HITMAN speedrun community**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solderq35/fg-time-calc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solderq35/fg-time-calc/issues"
+  },
+  "homepage": "https://github.com/solderq35/fg-time-calc#readme",
+  "dependencies": {
+    "prettier": "2.6.2"
+  }
+}
