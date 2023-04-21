@@ -4,7 +4,7 @@
 
 Tool for adding up level completion times for full game runs, **with an estimated 20 regular users among the HITMAN speedrun community**.
 
-Disclaimer: The codebase is heavily based on Grun1's original site: http://www.grun1.com/utils/timeCalc.html.
+NOTE: This is a modified version of [the original Time Calculator](http://www.grun1.com/utils/timeCalc.html) by Gordon Smith
 
 ### Improvements So Far over Grun1's Original Site
 
