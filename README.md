@@ -1,5 +1,9 @@
 # Full Game Time Calculator
 
+## Site URL (Try it Yourself!)
+
+**https://solderq35.github.io/fg-time-calc/**
+
 ## About
 
 ### Background & Credits
