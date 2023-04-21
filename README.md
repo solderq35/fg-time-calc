@@ -2,7 +2,7 @@
 
 ## About
 
-Tool for adding up level completion times for full game runs, **with an estimated 20 regular users among the HITMAN speedrun community**.
+Tool for adding up level completion times for full game runs, ** HITMAN speedrun community**.
 
 NOTE: This is a modified version of [the original Time Calculator](http://www.grun1.com/utils/timeCalc.html) by Gordon Smith
 
