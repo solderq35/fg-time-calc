@@ -44,7 +44,8 @@ Usage:
 
 1. Enter times into input field, a running total of your total time is calculated. Use the format minutes:seconds for each level.
 2. Click "Save Data as Link" (as highlighted in below screenshot); this will generate three URL's (the original long URL, the shortened URL, and the shortened preview URL). Just clicking on "Save Data as Link" once will save the original long URL to your clipboard, as confirmed by a popup window.
-3. Next click the "copy icon" (as highlighted in below screenshot); this will copy the shortened URL (via TinyURL API) to your clipboard, as confirmed by a popup window.
+3. Next click the "copy icon" next to the "Tiny URL" text (as highlighted in below screenshot); this will copy the shortened URL (via TinyURL API) to your clipboard, as confirmed by a popup window.
+    - If you want to be cautious, feel free to click the "copy icon" by the "Preview Tiny URL" text to double check the original URL behind the shortened URL
 
 Example Screenshot:
 ![image](https://user-images.githubusercontent.com/82061589/233585877-22d0103b-8ec9-486f-a732-f5915eefe801.png)
