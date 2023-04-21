@@ -8,7 +8,7 @@ The Full Game Time Calculator is a modified version of the [the original Time Ca
 
 - **NOTE: I obtained written permission from Smith to use and modify his source code as I wish, with the stipulation that my modified version remains free to use for everyone, and that I credit him and the original Time Calculator site appropiately, which I am happy to comply with**
 
-I have to credit Gordon Smith for the idea of designing the calculator such that whatever you type into the calculator's rows is simply appended to the site's URL. This enables sharing simple timesplits and comments to others on the Internet without a need to deal with database costs or scaling.
+I have to credit Smith for the idea of designing the calculator such that whatever you type into the calculator's rows is simply appended to the site's URL. This enables sharing simple timesplits and comments to others on the Internet without a need to deal with database costs or scaling.
 
 In early 2021, I began looking into using Gordon Smith's site for the purpose of tracking [Hitman 3 Full Game speedruns](https://www.speedrun.com/hitman_3/full_game). In Hitman speedruns, for reasons of promoting cross-platform competition and fair play with different loading speeds, we simply sum up the in-game time level finishes for each level for the final time in a "full game run". However, while our policy resulted in better cross-platform compatibility in Hitman speedrunning, it also made it harder for people to tell at a glance how much time was spent on each level.
 
@@ -26,7 +26,7 @@ Here are some of the improvements I have made to Smith's original Time Calculato
 
 - Added the ability to **generate short URL's of the same length, regardless of how many split times are inserted**
   - One of the biggest issues with the original Time Calculator was how long the URL's could get, making them unwieldy to include on Youtube video descriptions, for instance.
-  - Used a combination of TinyURL API (via [this Codepen from Ephellon](https://codepen.io/Ephellon/pen/EvvGGp)), as well as [CORS Anywhere by Rob--w](https://github.com/Rob--W/cors-anywhere) (to proxy my TinyURL API requests and get around Same-Origin policy issues) to generate the short URL's
+  - Used a combination of TinyURL API (via [this Codepen from Ephellon](https://codepen.io/Ephellon/pen/EvvGGp)), as well as [CORS Anywhere by Rob--w](https://github.com/Rob--W/cors-anywhere) (to proxy my TinyURL API requests and improve performance) to generate the short URL's
 - Added feature to save URL with one click (on both desktop and mobile browsers); originally you had to manually highlight and copy the generated URL, which was especially unwieldy to work with on mobile
 - Redeployed site on Github Pages, which lead to greater site stability
   - Github Pages deployment also enabled HTTPS protocol, which greatly improved the security of the application.
@@ -36,7 +36,7 @@ Here are some of the improvements I have made to Smith's original Time Calculato
 
 ### Technologies Used
 
-- Lightweight site built with vanilla Javascript, HTML, CSS.
+- Lightweight site built with Javascript, HTML, CSS.
 - Deployed on Github Pages
 
 ## Screenshots and Usage Instructions
