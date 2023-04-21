@@ -24,7 +24,7 @@ However, there were still some improvements (in my humble opinion) to be made.
 
 Here are some of the improvements I have made to Smith's original Time Calculator (non-exaustive):
 
-- Utilized a [CodeSandbox from Ephellon](https://codepen.io/Ephellon/pen/EvvGGp) as a reference for implementing calls to the TinyURL API, resulting in a significant improvement in user experience through the generation of shorter, more streamlined URLs via the 'Full Game Time Calculator' application.
+- Utilized a [CodeSandbox from Ephellon](https://codepen.io/Ephellon/pen/EvvGGp) as a reference for implementing calls to the TinyURL API, resulting in a significant improvement in user experience through the generation of shorter, more streamlined URL's
     - Deployed a custom instance of the [CORS Anywhere proxy by Rob--w](https://github.com/Rob--W/cors-anywhere) on a personal endpoint using Railway.app, in order to avoid rate limiting on the main CORS Anywhere deployment and ensure reliable access to the TinyURL API
 - Added feature to save URL with one click (on both desktop and mobile browsers); originally you had to manually highlight and copy the generated URL, which was especially unwieldy to work with on mobile
 - Redeployed site on Github Pages, which lead to greater site stability
