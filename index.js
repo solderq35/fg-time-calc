@@ -398,8 +398,6 @@ function saveData() {
   alert("Original Run Link Copied to Clipboard");
 
   document.getElementById("myInput").value = url;
-  document.getElementById("myInput2").value = url;
-  document.getElementById("myInput3").value = url;
 
   var copyText = document.getElementById("myInput");
   /* Select the text field */
