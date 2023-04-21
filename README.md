@@ -47,4 +47,4 @@ Usage:
 3. Next click the "copy icon" (as highlighted in below screenshot); this will copy the shortened URL (via TinyURL API) to your clipboard, as confirmed by a popup window.
 
 Example Screenshot:
-![image](https://user-images.githubusercontent.com/82061589/233559040-04f99020-b252-4eb6-af28-f265a104940f.png)
+![image](https://user-images.githubusercontent.com/82061589/233585877-22d0103b-8ec9-486f-a732-f5915eefe801.png)
