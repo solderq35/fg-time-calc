@@ -41,12 +41,11 @@ Here are some of the improvements I have made to Smith's original Time Calculato
 
 ## Screenshots and Usage Instructions
 
-Usage: Enter times into input field, a running total of your total time is calculated. Use the format minutes:seconds for each level.
+Usage: 
 
-Click "Save Data as Link" (as highlighted in below screenshot); this will generate three URL's (the original long URL, the shortened URL, and the shortened preview URL).
-Just clicking on "Save Data as Link" once will save the original long URL to your clipboard, as confirmed by a popup window.
-
-Next click the "copy icon" (as highlighted in below screenshot); this will copy the shortened URL (via TinyURL API) to your clipboard, as confirmed by a popup window.
+1. Enter times into input field, a running total of your total time is calculated. Use the format minutes:seconds for each level.
+2. Click "Save Data as Link" (as highlighted in below screenshot); this will generate three URL's (the original long URL, the shortened URL, and the shortened preview URL). Just clicking on "Save Data as Link" once will save the original long URL to your clipboard, as confirmed by a popup window.
+3. Next click the "copy icon" (as highlighted in below screenshot); this will copy the shortened URL (via TinyURL API) to your clipboard, as confirmed by a popup window.
 
 Example Screenshot:
 ![image](https://user-images.githubusercontent.com/82061589/233559040-04f99020-b252-4eb6-af28-f265a104940f.png)
