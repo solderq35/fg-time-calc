@@ -20,7 +20,7 @@ However, there were still some improvements (in my humble opinion) to be made.
 
 ### My Improvements
 
-**NOTE: I greatly appreciate Smith's contributions as noted above, and the following should only be read as constructive criticsm / improvements**
+**NOTE: I greatly appreciate Smith's contributions as noted above, and the following should only be read as constructive criticism / improvements**
 
 Here are some of the improvements I have made to Smith's original Time Calculator (non-exaustive):
 
