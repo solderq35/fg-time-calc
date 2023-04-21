@@ -6,7 +6,7 @@
 
 The Full Game Time Calculator is a modified version of the [the original Time Calculator](http://www.grun1.com/utils/timeCalc.html) by Gordon Smith.
 
-- **NOTE: I obtained written permission from Smith to use and modify his source code as I wish, with the stipulation that my modify version remains free to use for everyone, and that I credited him and the original Time Calculator site appropiately, which I greatly appreciate**
+- **NOTE: I obtained written permission from Smith to use and modify his source code as I wish, with the stipulation that my modified version remains free to use for everyone, and that I credit him and the original Time Calculator site appropiately, which I am happy to comply with**
 
 I have to credit Gordon Smith for the idea of designing the calculator such that whatever you type into the calculator's rows is simply appended to the site's URL. This enables sharing simple timesplits and comments to others on the Internet without a need to deal with database costs or scaling.
 
