@@ -24,9 +24,8 @@ However, there were still some improvements (in my humble opinion) to be made.
 
 Here are some of the improvements I have made to Smith's original Time Calculator (non-exaustive):
 
-- Added the ability to **generate short URL's of the same length, regardless of how many split times are inserted**
-  - One of the biggest issues with the original Time Calculator was how long the URL's could get, making them unwieldy to include on Youtube video descriptions, for instance.
-  - Used a combination of TinyURL API (via [this Codepen from Ephellon](https://codepen.io/Ephellon/pen/EvvGGp)), as well as [CORS Anywhere by Rob--w](https://github.com/Rob--W/cors-anywhere) (to proxy my TinyURL API requests and improve performance) to generate the short URL's
+- Utilized a [CodeSandbox from Ephellon](https://codepen.io/Ephellon/pen/EvvGGp) as a reference for implementing calls to the TinyURL API, resulting in a significant improvement in user experience through the generation of shorter, more streamlined URLs via the 'Full Game Time Calculator' application.
+    - Deployed a custom instance of the [CORS Anywhere proxy by Rob--w](https://github.com/Rob--W/cors-anywhere) on a personal endpoint using Railway.app, in order to avoid rate limiting on the main CORS Anywhere deployment and ensure reliable access to the TinyURL API
 - Added feature to save URL with one click (on both desktop and mobile browsers); originally you had to manually highlight and copy the generated URL, which was especially unwieldy to work with on mobile
 - Redeployed site on Github Pages, which lead to greater site stability
   - Github Pages deployment also enabled HTTPS protocol, which greatly improved the security of the application.
