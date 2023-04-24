@@ -201,32 +201,32 @@
                         <br />
                         <div class="adjust-line-height">
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Paris&c2=Sapienza&c3=Marrakesh&c4=Bangkok&c5=Colorado&c6=Hokkaido&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Paris&c2=Sapienza&c3=Marrakesh&c4=Bangkok&c5=Colorado&c6=Hokkaido&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Season 1</a
                           ><br />
 
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Source&c2=Author&c3=Vector&c4=Patient%20Zero%20Hokkaido&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Source&c2=Author&c3=Vector&c4=Patient%20Zero%20Hokkaido&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Patient Zero</a
                           ><br />
 
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Hawke's%20Bay&c2=Miami&c3=Santa%20Fortuna&c4=Mumbai&c5=Whittleton%20Creek&c6=Sgail&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Hawke's%20Bay&c2=Miami&c3=Santa%20Fortuna&c4=Mumbai&c5=Whittleton%20Creek&c6=Sgail&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Season 2 (no DLC)</a
                           ><br />
 
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Hawke's%20Bay&c2=Miami&c3=Santa%20Fortuna&c4=Mumbai&c5=Whittleton%20Creek&c6=Sgail&c7=New%20York&c8=Haven&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Hawke's%20Bay&c2=Miami&c3=Santa%20Fortuna&c4=Mumbai&c5=Whittleton%20Creek&c6=Sgail&c7=New%20York&c8=Haven&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Season 2 (w/ DLC)</a
                           ><br />
 
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Dubai&c2=Dartmoor&c3=Berlin&c4=Chongqing&c5=Mendoza&c6=Romania&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Dubai&c2=Dartmoor&c3=Berlin&c4=Chongqing&c5=Mendoza&c6=Romania&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Season 3</a
                           ><br />
 
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Paris&c2=Sapienza&c3=Marrakesh&c4=Bangkok&c5=Colorado&c6=Hokkaido&c7=Hawke's%20Bay&c8=Miami&c9=Santa%20Fortuna&c10=Mumbai&c11=Whittleton%20Creek&c12=Isle%20of%20Sgail&c13=New%20York&c14=Haven&c15=Dubai&c16=Dartmoor&c17=Berlin&c18=Chongqing&c19=Mendoza&c20=Romania&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Paris&c2=Sapienza&c3=Marrakesh&c4=Bangkok&c5=Colorado&c6=Hokkaido&c7=Hawke's%20Bay&c8=Miami&c9=Santa%20Fortuna&c10=Mumbai&c11=Whittleton%20Creek&c12=Isle%20of%20Sgail&c13=New%20York&c14=Haven&c15=Dubai&c16=Dartmoor&c17=Berlin&c18=Chongqing&c19=Mendoza&c20=Romania&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Trilogy Campaign</a
                           ><br />
                         </div>
@@ -613,27 +613,77 @@
                       </div>
                     </td>
                     <td align="left">
-                        <span style="display: block;text-align: center; font-weight: bold;">Lazy Input</span><br>
+                      <span
+                        style="
+                          display: block;
+                          text-align: center;
+                          font-weight: bold;
+                        "
+                        >Lazy Input</span
+                      ><br />
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="lazyinput1"
+                          name="lazyinput1"
+                          checked
+                        />
+                        <label for="lazyinput1"
+                          ><b>Dot as a separator:</b> 1.11 -> 1:11</label
+                        >
+                      </div>
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="lazyinput2"
+                          name="lazyinput2"
+                          checked
+                        />
+                        <label for="lazyinput2"
+                          ><b>No separator mode:</b> 111 -> 1:11</label
+                        >
+                      </div>
+                      <div>
+                        <br /><label for="lazytime">Time (optional):</label>
+                        <input
+                          type="text"
+                          id="lazytime"
+                          name="lazytime"
+                          size="8"
+                          onchange="lazyInputDot(this);lazyInputNoSepMode(this);"
+                          style="width: 100%; text-align: left"
+                        />
+                        <label for="lazylevel">Comment (optional):</label>
+                        <input
+                          type="text"
+                          id="lazylevel"
+                          name="lazylevel"
+                          size="15"
+                          list="hitman-maps-list"
+                          style="width: 100%; text-align: left"
+                        />
                         <div>
-                          <input type="checkbox" id="lazyinput1" name="lazyinput1" checked>
-                          <label for="lazyinput1"><b>Dot as a separator:</b> 1.11 -> 1:11</label>
+                          <input
+                            type="checkbox"
+                            id="lazyreset"
+                            name="lazyreset"
+                          />
+                          <label for="lazyreset">Reset?</label>
                         </div>
-                        <div>
-                          <input type="checkbox" id="lazyinput2" name="lazyinput2" checked>
-                          <label for="lazyinput2"><b>No separator mode:</b> 111 -> 1:11</label>
-                        </div>
-                        <div>
-                          <br><label for="lazytime">Time (optional):</label>
-                          <input type="text" id="lazytime" name="lazytime" size="8" onchange="lazyInputDot(this);lazyInputNoSepMode(this);" style="width: 100%; text-align: left;"/>
-                          <label for="lazylevel">Comment (optional):</label>
-                          <input type="text" id="lazylevel" name="lazylevel" size="15" list="hitman-maps-list" style="width: 100%; text-align: left;"/>
-                          <div>
-                            <input type="checkbox" id="lazyreset" name="lazyreset">
-                            <label for="lazyreset">Reset?</label>
-                          </div><br>
-                          <input type="button" value="Add" onclick="lazyAdd()" style="width: 75px;text-align: center;"/>
-                          <input type="button" value="Clear" onclick="lazyClear()" style="width: 75px;text-align: center;"/>
-                        </div>
+                        <br />
+                        <input
+                          type="button"
+                          value="Add"
+                          onclick="lazyAdd()"
+                          style="width: 75px; text-align: center"
+                        />
+                        <input
+                          type="button"
+                          value="Clear"
+                          onclick="lazyClear()"
+                          style="width: 75px; text-align: center"
+                        />
+                      </div>
                     </td>
                   </tr>
                   <tr bgcolor="#ccccdd">
@@ -1428,326 +1478,646 @@
                     </td>
                     <!-- COMMENTS -->
                     <td align="center" valign="top">
-                      <input
-                        type="text"
-                        name="comments1"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments2"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments3"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments4"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments5"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments6"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments7"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments8"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments9"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments10"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments11"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments12"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments13"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments14"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments15"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments16"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments17"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments18"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments19"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments20"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments21"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments22"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments23"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments24"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments25"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments26"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments27"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments28"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments29"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments30"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments31"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments32"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments33"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments34"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments35"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments36"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments37"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments38"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments39"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments40"
-                        size="30"
-                        class="comments"
-                        list="hitman-maps-list"
-                        onchange="formatComments()"
-                      /><br />
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments1"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments2"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments3"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments4"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments5"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments6"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments7"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments8"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments9"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments10"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments11"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments12"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments13"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments14"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments15"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments16"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments17"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments18"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments19"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments20"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments21"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments22"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments23"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments24"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments25"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments26"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments27"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments28"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments29"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments30"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments31"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments32"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments33"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments34"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments35"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments36"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments37"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments38"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments39"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments40"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
                     </td>
                   </tr>
                   <tr bgcolor="#bbbbcc">

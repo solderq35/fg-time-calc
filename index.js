@@ -500,12 +500,11 @@ function changeMode() {
 }
 
 function addTimes(field = null) {
-    
   if (field) {
-      lazyInputDot(field);
-      lazyInputNoSepMode(field);
+    lazyInputDot(field);
+    lazyInputNoSepMode(field);
   }
-  
+
   var prevTotalTime = 0;
   var prevTotalFrames = 0;
   var totalTime = 0;
@@ -850,88 +849,96 @@ function initPage() {
   return true;
 }
 
-
 function lazyInputDot(field) {
-    if (!document.getElementById('lazyinput1').checked)
-        return;
-    
-    field.value = field.value.replaceAll(".", ":");
+  if (!document.getElementById("lazyinput1").checked) return;
+
+  field.value = field.value.replaceAll(".", ":");
 }
 
 function lazyInputNoSepMode(field) {
-    if (!document.getElementById('lazyinput2').checked)
-        return;
-    
-    let len = field.value.length;
-    let temp_val = field.value;
-    
-    if (field.value.indexOf(":") == -1 && field.value.indexOf(".") == -1 && len > 2) {
-        temp_val = temp_val.split('').reverse().join('');
-        temp_val = temp_val.match(/.{1,2}/g).join(":");
-        temp_val = temp_val.split('').reverse().join('');
-        field.value = temp_val;
-    }
+  if (!document.getElementById("lazyinput2").checked) return;
+
+  let len = field.value.length;
+  let temp_val = field.value;
+
+  if (
+    field.value.indexOf(":") == -1 &&
+    field.value.indexOf(".") == -1 &&
+    len > 2
+  ) {
+    temp_val = temp_val.split("").reverse().join("");
+    temp_val = temp_val.match(/.{1,2}/g).join(":");
+    temp_val = temp_val.split("").reverse().join("");
+    field.value = temp_val;
+  }
 }
 
 function lazyAdd() {
-    var reset = false;
-    var time = document.getElementById("lazytime").value;
-    var level = document.getElementById("lazylevel").value;
-    var pos_time = -1;
-    var pos_level = -1;
-    
-    if (document.getElementById('lazyreset').checked) {
-        reset = true;
-    }
-    
+  var reset = false;
+  var time = document.getElementById("lazytime").value;
+  var level = document.getElementById("lazylevel").value;
+  var pos_time = -1;
+  var pos_level = -1;
+
+  if (document.getElementById("lazyreset").checked) {
+    reset = true;
+  }
+
+  if (time) {
+    var el_times = document.querySelectorAll(".times");
+    [...el_times].every((el_time, index) => {
+      if (!el_time.value) {
+        pos_time = index;
+        return false;
+      }
+      return true;
+    });
+  }
+  if (level) {
+    var el_levels = document.querySelectorAll(".comments");
+    [...el_levels].every((el_level, index) => {
+      if (!el_level.value) {
+        pos_level = index;
+        return false;
+      }
+      return true;
+    });
+  }
+
+  var pos = Math.max(pos_time, pos_level);
+
+  if (pos != -1) {
     if (time) {
-        var el_times = document.querySelectorAll(".times");
-        [...el_times].every((el_time, index) => {
-            if (!el_time.value) {
-                pos_time = index;       
-                return false;
-            }
-            return true;
-        });
+      el_times[pos].value = time;
+      addTimes(el_times[pos]);
     }
     if (level) {
-        var el_levels = document.querySelectorAll(".comments");
-        [...el_levels].every((el_level, index) => {
-            if (!el_level.value) {
-                pos_level = index;       
-                return false;
-            }
-            return true;
-        });
+      el_levels[pos].value = reset ? level + " Reset" : level;
     }
-    
-    var pos = Math.max(pos_time, pos_level);
-    
-    if (pos != -1) {
-        if (time) {
-            el_times[pos].value = time;
-            addTimes(el_times[pos]);
-        }
-        if (level) {
-            el_levels[pos].value = reset ? level + " Reset" : level;
-        }
-    }
-    
-    lazyClear();
+  }
+
+  lazyClear();
 }
 
 function lazyClear() {
-    document.getElementById("lazytime").value = "";
-    document.getElementById("lazylevel").value = "";
-    document.getElementById("lazyreset").checked = false;
+  document.getElementById("lazytime").value = "";
+  document.getElementById("lazylevel").value = "";
+  document.getElementById("lazyreset").checked = false;
 }
 
 function formatComments() {
-    const comments = document.querySelectorAll(".comments:not(:placeholder-shown)");
+  const comments = document.querySelectorAll(
+    ".comments:not(:placeholder-shown)"
+  );
 
-    comments.forEach((comment) => {
-        comment.value = comment.value.replaceAll("(", "");
-        comment.value = comment.value.replaceAll(")", "");
-        // add more if needed
-    });
+  comments.forEach((comment) => {
+    comment.value = comment.value.replaceAll("(", "");
+    comment.value = comment.value.replaceAll(")", "");
+    // add more if needed
+  });
+}
+
+function clearRowInput(event) {
+  var input = event.target.parentNode.querySelector("input");
+  input.value = "";
 }
