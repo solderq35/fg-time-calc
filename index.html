@@ -201,32 +201,32 @@
                         <br />
                         <div class="adjust-line-height">
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Paris&c2=Sapienza&c3=Marrakesh&c4=Bangkok&c5=Colorado&c6=Hokkaido&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Paris&c2=Sapienza&c3=Marrakesh&c4=Bangkok&c5=Colorado&c6=Hokkaido&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Season 1</a
                           ><br />
 
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Source&c2=Author&c3=Vector&c4=Patient%20Zero%20Hokkaido&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Source&c2=Author&c3=Vector&c4=Patient%20Zero%20Hokkaido&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Patient Zero</a
                           ><br />
 
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Hawke's%20Bay&c2=Miami&c3=Santa%20Fortuna&c4=Mumbai&c5=Whittleton%20Creek&c6=Sgail&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Hawke's%20Bay&c2=Miami&c3=Santa%20Fortuna&c4=Mumbai&c5=Whittleton%20Creek&c6=Sgail&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Season 2 (no DLC)</a
                           ><br />
 
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Hawke's%20Bay&c2=Miami&c3=Santa%20Fortuna&c4=Mumbai&c5=Whittleton%20Creek&c6=Sgail&c7=New%20York&c8=Haven&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Hawke's%20Bay&c2=Miami&c3=Santa%20Fortuna&c4=Mumbai&c5=Whittleton%20Creek&c6=Sgail&c7=New%20York&c8=Haven&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Season 2 (w/ DLC)</a
                           ><br />
 
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Dubai&c2=Dartmoor&c3=Berlin&c4=Chongqing&c5=Mendoza&c6=Romania&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Dubai&c2=Dartmoor&c3=Berlin&c4=Chongqing&c5=Mendoza&c6=Romania&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Season 3</a
                           ><br />
 
                           <a
-                            href="https://solderq35.github.io/fg-time-calc/?c1=Paris&c2=Sapienza&c3=Marrakesh&c4=Bangkok&c5=Colorado&c6=Hokkaido&c7=Hawke's%20Bay&c8=Miami&c9=Santa%20Fortuna&c10=Mumbai&c11=Whittleton%20Creek&c12=Isle%20of%20Sgail&c13=New%20York&c14=Haven&c15=Dubai&c16=Dartmoor&c17=Berlin&c18=Chongqing&c19=Mendoza&c20=Romania&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
+                            href="?c1=Paris&c2=Sapienza&c3=Marrakesh&c4=Bangkok&c5=Colorado&c6=Hokkaido&c7=Hawke's%20Bay&c8=Miami&c9=Santa%20Fortuna&c10=Mumbai&c11=Whittleton%20Creek&c12=Isle%20of%20Sgail&c13=New%20York&c14=Haven&c15=Dubai&c16=Dartmoor&c17=Berlin&c18=Chongqing&c19=Mendoza&c20=Romania&mode=0&fs3=1&ft2=1&f3t1=1&f4t0=1&d=:&o1=1&fps="
                             >Trilogy Campaign</a
                           ><br />
                         </div>
@@ -383,6 +383,36 @@
                             onChange="changeFps(this)"
                           />
                           frames per second.<br /><br />
+                          <datalist id="hitman-maps-list">
+                            <option value=" " readonly>Season 1</option>
+                            <option>Paris</option>
+                            <option>Sapienza</option>
+                            <option>Marrakesh</option>
+                            <option>Bangkok</option>
+                            <option>Colorado</option>
+                            <option>Hokkaido</option>
+                            <option value=" " readonly>Season 2</option>
+                            <option>Hawke's Bay</option>
+                            <option>Miami</option>
+                            <option>Santa Fortuna</option>
+                            <option>Mumbai</option>
+                            <option>Whittleton Creek</option>
+                            <option>Isle of Sgail</option>
+                            <option>New York</option>
+                            <option>Haven Island</option>
+                            <option value=" " readonly>Season 3</option>
+                            <option>Dubai</option>
+                            <option>Dartmoor</option>
+                            <option>Berlin</option>
+                            <option>Chongqing</option>
+                            <option>Mendoza</option>
+                            <option>Romania</option>
+                            <option value=" " readonly>Patient Zero</option>
+                            <option>Source</option>
+                            <option>Author</option>
+                            <option>Vector</option>
+                            <option>Patient Zero Hokkaido</option>
+                          </datalist>
                         </div>
                       </font>
                     </td>
@@ -582,31 +612,96 @@
                         &nbsp;hr : min : sec&nbsp;
                       </div>
                     </td>
-                    <td>&nbsp;</td>
+                    <td align="left">
+                      <span
+                        style="
+                          display: block;
+                          text-align: center;
+                          font-weight: bold;
+                        "
+                        >Lazy Input</span
+                      ><br />
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="lazyinput1"
+                          name="lazyinput1"
+                          checked
+                        />
+                        <label for="lazyinput1"
+                          ><b>Dot as a separator:</b> 1.11 -> 1:11</label
+                        >
+                      </div>
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="lazyinput2"
+                          name="lazyinput2"
+                          checked
+                        />
+                        <label for="lazyinput2"
+                          ><b>No separator mode:</b> 111 -> 1:11</label
+                        >
+                      </div>
+                      <div>
+                        <br /><label for="lazytime">Time (optional):</label>
+                        <input
+                          type="text"
+                          id="lazytime"
+                          name="lazytime"
+                          size="8"
+                          onchange="lazyInputDot(this);lazyInputNoSepMode(this);"
+                          style="width: 100%; text-align: left"
+                        />
+                        <label for="lazylevel">Comment (optional):</label>
+                        <input
+                          type="text"
+                          id="lazylevel"
+                          name="lazylevel"
+                          size="15"
+                          list="hitman-maps-list"
+                          style="width: 100%; text-align: left"
+                        />
+                        <div>
+                          <input
+                            type="checkbox"
+                            id="lazyreset"
+                            name="lazyreset"
+                          />
+                          <label for="lazyreset">Reset?</label>
+                        </div>
+                        <br />
+                        <input
+                          type="button"
+                          value="Add"
+                          onclick="lazyAdd()"
+                          style="width: 75px; text-align: center"
+                        />
+                        <input
+                          type="button"
+                          value="Clear"
+                          onclick="lazyClear()"
+                          style="width: 75px; text-align: center"
+                        />
+                      </div>
+                    </td>
                   </tr>
                   <tr bgcolor="#ccccdd">
                     <!-- TIME -->
-                    <td align="center" valign="top">
+                    <td align="center">
                       <!--- <p>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;hr&nbsp;&nbsp;:&nbsp;&nbsp;min&nbsp;&nbsp;:&nbsp;&nbsp;sec&nbsp;&nbsp;&nbsp;&nbsp; --->
                       &nbsp;&nbsp;&nbsp;&nbsp;<b>enter times:</b
                       >&nbsp;&nbsp;&nbsp;&nbsp;<br />
                       <div id="inputFormatDisplay"></div>
                     </td>
                     <!-- CUMULATIVE TIME -->
-                    <td align="center" valign="top">
-                      <b>cumulative<br />times:</b><br /><br />
+                    <td align="center">
+                      <b>cumulative<br />times:</b><br />
                       <div id="outputFormatDisplay"></div>
                     </td>
                     <!-- COMMENTS -->
-                    <td align="center" valign="top">
+                    <td align="center">
                       <b>comments</b>
-                      <br />
-                      <br />
-                      <b
-                        >Do not include comments with parenthethes "()", it
-                        interferes with Markdown link formatting.</b
-                      >
-                      <br />
                     </td>
 
                     <br />
@@ -623,7 +718,8 @@
                               type="text"
                               name="time1"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time2', event)"
                             />
                           </td>
@@ -635,7 +731,8 @@
                               type="text"
                               name="time2"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time3', event)"
                             />
                           </td>
@@ -647,7 +744,8 @@
                               type="text"
                               name="time3"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time4', event)"
                             />
                           </td>
@@ -659,7 +757,8 @@
                               type="text"
                               name="time4"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time5', event)"
                             />
                           </td>
@@ -671,7 +770,8 @@
                               type="text"
                               name="time5"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time6', event)"
                             />
                           </td>
@@ -683,7 +783,8 @@
                               type="text"
                               name="time6"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time7', event)"
                             />
                           </td>
@@ -695,7 +796,8 @@
                               type="text"
                               name="time7"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time8', event)"
                             />
                           </td>
@@ -707,7 +809,8 @@
                               type="text"
                               name="time8"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time9', event)"
                             />
                           </td>
@@ -719,7 +822,8 @@
                               type="text"
                               name="time9"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time10', event)"
                             />
                           </td>
@@ -731,7 +835,8 @@
                               type="text"
                               name="time10"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time11', event)"
                             />
                           </td>
@@ -743,7 +848,8 @@
                               type="text"
                               name="time11"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time12', event)"
                             />
                           </td>
@@ -755,7 +861,8 @@
                               type="text"
                               name="time12"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time13', event)"
                             />
                           </td>
@@ -767,7 +874,8 @@
                               type="text"
                               name="time13"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time14', event)"
                             />
                           </td>
@@ -779,7 +887,8 @@
                               type="text"
                               name="time14"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time15', event)"
                             />
                           </td>
@@ -791,7 +900,8 @@
                               type="text"
                               name="time15"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time16', event)"
                             />
                           </td>
@@ -803,7 +913,8 @@
                               type="text"
                               name="time16"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time17', event)"
                             />
                           </td>
@@ -815,7 +926,8 @@
                               type="text"
                               name="time17"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time18', event)"
                             />
                           </td>
@@ -827,7 +939,8 @@
                               type="text"
                               name="time18"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time19', event)"
                             />
                           </td>
@@ -839,7 +952,8 @@
                               type="text"
                               name="time19"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time20', event)"
                             />
                           </td>
@@ -851,7 +965,8 @@
                               type="text"
                               name="time20"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time21', event)"
                             />
                           </td>
@@ -863,7 +978,8 @@
                               type="text"
                               name="time21"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time22', event)"
                             />
                           </td>
@@ -875,7 +991,8 @@
                               type="text"
                               name="time22"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time23', event)"
                             />
                           </td>
@@ -887,7 +1004,8 @@
                               type="text"
                               name="time23"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time24', event)"
                             />
                           </td>
@@ -899,7 +1017,8 @@
                               type="text"
                               name="time24"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time25', event)"
                             />
                           </td>
@@ -911,7 +1030,8 @@
                               type="text"
                               name="time25"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time26', event)"
                             />
                           </td>
@@ -923,7 +1043,8 @@
                               type="text"
                               name="time26"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time27', event)"
                             />
                           </td>
@@ -935,7 +1056,8 @@
                               type="text"
                               name="time27"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time28', event)"
                             />
                           </td>
@@ -947,7 +1069,8 @@
                               type="text"
                               name="time28"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time29', event)"
                             />
                           </td>
@@ -959,7 +1082,8 @@
                               type="text"
                               name="time29"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time30', event)"
                             />
                           </td>
@@ -971,7 +1095,8 @@
                               type="text"
                               name="time30"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time31', event)"
                             />
                           </td>
@@ -983,7 +1108,8 @@
                               type="text"
                               name="time31"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time32', event)"
                             />
                           </td>
@@ -995,7 +1121,8 @@
                               type="text"
                               name="time32"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time33', event)"
                             />
                           </td>
@@ -1007,7 +1134,8 @@
                               type="text"
                               name="time33"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time34', event)"
                             />
                           </td>
@@ -1019,7 +1147,8 @@
                               type="text"
                               name="time34"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time35', event)"
                             />
                           </td>
@@ -1031,7 +1160,8 @@
                               type="text"
                               name="time35"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time36', event)"
                             />
                           </td>
@@ -1043,7 +1173,8 @@
                               type="text"
                               name="time36"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time37', event)"
                             />
                           </td>
@@ -1055,7 +1186,8 @@
                               type="text"
                               name="time37"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time38', event)"
                             />
                           </td>
@@ -1067,7 +1199,8 @@
                               type="text"
                               name="time38"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time39', event)"
                             />
                           </td>
@@ -1079,7 +1212,8 @@
                               type="text"
                               name="time39"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time40', event)"
                             />
                           </td>
@@ -1091,7 +1225,8 @@
                               type="text"
                               name="time40"
                               size="10"
-                              onChange="addTimes()"
+                              class="times"
+                              onChange="addTimes(this)"
                               onKeyPress="checkKeyPress('time1', event)"
                             /><br />
                           </td>
@@ -1343,246 +1478,646 @@
                     </td>
                     <!-- COMMENTS -->
                     <td align="center" valign="top">
-                      <input
-                        type="text"
-                        name="comments1"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments2"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments3"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments4"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments5"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments6"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments7"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments8"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments9"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments10"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments11"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments12"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments13"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments14"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments15"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments16"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments17"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments18"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments19"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments20"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments21"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments22"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments23"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments24"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments25"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments26"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments27"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments28"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments29"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments30"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments31"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments32"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments33"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments34"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments35"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments36"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments37"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments38"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments39"
-                        size="30"
-                        class="comments"
-                      /><br />
-                      <input
-                        type="text"
-                        name="comments40"
-                        size="30"
-                        class="comments"
-                      /><br />
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments1"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments2"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments3"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments4"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments5"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments6"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments7"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments8"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments9"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments10"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments11"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments12"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments13"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments14"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments15"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments16"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments17"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments18"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments19"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments20"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments21"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments22"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments23"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments24"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments25"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments26"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments27"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments28"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments29"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments30"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments31"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments32"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments33"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments34"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments35"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments36"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments37"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments38"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments39"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
+                      <div class="row-div-flex">
+                        <input
+                          type="text"
+                          name="comments40"
+                          size="30"
+                          class="comments"
+                          list="hitman-maps-list"
+                          onchange="formatComments()"
+                        />
+                        <button
+                          type="button"
+                          onclick="clearRowInput(event)"
+                          class="clear-input-button"
+                        ></button
+                        ><br />
+                      </div>
                     </td>
                   </tr>
                   <tr bgcolor="#bbbbcc">
