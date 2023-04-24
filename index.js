@@ -938,7 +938,97 @@ function formatComments() {
   });
 }
 
+let realTimeVar = 0;
+let final_i = 0;
+
+function recalculateTotalTime() {
+  let cumTimeVar;
+  let totalSeconds = 0;
+
+  final_i = 40;
+
+  for (i = 1; i <= 40; i++) {
+
+    cumTimeVar = 0;
+    let timeVar = "time" + i;
+    console.log(timeVar);
+
+    if (document.getElementsByName(timeVar)[0].value) {
+      const timeStr = document.getElementsByName(timeVar)[0].value;
+      const [minutes, seconds] = timeStr.split(':').map(Number);
+      if (!isNaN(minutes) && !isNaN(seconds)) {
+        const totalTimeInSeconds = minutes * 60 + seconds;
+        if (totalTimeInSeconds > 0) {
+          totalSeconds += totalTimeInSeconds;
+          final_i = i;
+          console.log(i + ' final i');
+        }
+      } else if (!isNaN(parseInt(document.getElementsByName(timeVar)[0].value))) {
+        totalSeconds += parseInt(document.getElementsByName(timeVar)[0].value);
+        final_i = i;
+        console.log(i + ' final i');
+      }
+    }
+
+    let cumTimeVarId = "cumtime" + i;
+    console.log(cumTimeVarId + "cumtime id");
+    if (i < final_i + 2) {
+      document.getElementsByName(cumTimeVarId)[0].value = formatSeconds(totalSeconds);
+    }
+    
+    if (i > (final_i + 1)) {
+      console.log(i + ' i right now');
+      console.log(final_i + ' final i right now');
+      break;
+    }
+  }
+}
+
+function formatSeconds(totalSeconds) {
+  let minutes = Math.floor(totalSeconds / 60);
+  let seconds = totalSeconds % 60;
+  let formattedTime = "";
+  console.log(totalSeconds)
+
+  if (totalSeconds >= 3600) {
+    formattedTime += Math.floor(totalSeconds / 3600) + ":" 
+    if (minutes < 10) {
+      formattedTime += "0";
+    }
+    formattedTime += minutes + ":"
+    if (seconds < 10) {
+
+      formattedTime += "0";
+    }
+  }
+
+  if (totalSeconds > 60 && totalSeconds < 3600) {
+    formattedTime += minutes + ":";
+    if (seconds < 10) {
+      formattedTime += "0";
+    }
+  }
+  
+  formattedTime += seconds;
+  
+  return formattedTime;
+}
+
+
+
 function clearRowInput(event) {
   var input = event.target.parentNode.querySelector("input");
+  console.log(input.name);
+
+  const str = input.name;
+  const match = str.match(/\d+/);
+  const num = match ? parseInt(match[0], 10) : null;
+  console.log(num);
+
+  let timeVar = "time" + num;
+
+  document.getElementsByName(timeVar)[0].value = "";
   input.value = "";
+
+  recalculateTotalTime();
 }
