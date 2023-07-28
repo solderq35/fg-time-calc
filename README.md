@@ -8,7 +8,7 @@
 
 ### Background & Credits
 
-The Full Game Time Calculator is a modified version of the [the original Time Calculator](http://www.grun1.com/utils/timeCalc.html) by Gordon Smith.
+The Full Game Time Calculator is a modified version of the [the original Time Calculator](https://www.grun1.grunsports.com/utils/timeCalc.html) by Gordon Smith.
 
 - **NOTE: I obtained written permission from Smith to use and modify his source code as I wish, with the stipulation that my modified version remains free to use for everyone, and that I credit him and the original Time Calculator site appropiately, which I am happy to comply with**
 
@@ -57,6 +57,7 @@ Example Screenshot:
 ### Extra Features
 
 There are some extra configuration options, such as:
+
 - "Lazy Inputs" option, so that periods can also be used as minute and seconds separators, or even infer minutes vs seconds based on digits of the input without any separators needed.
 - Input for custom time and comment insertions, speeds up workflow for recurring comment fields (like when you got several reset splits in a row)
 - Dropdown menu for level names to save time spent typing them
