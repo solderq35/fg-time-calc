@@ -28,8 +28,6 @@ However, there were still some improvements (in my humble opinion) to be made.
 
 Here are some of the improvements I have made to Smith's original Time Calculator (non-exaustive):
 
-- Utilized a [CodeSandbox from Ephellon](https://codepen.io/Ephellon/pen/EvvGGp) as a reference for implementing calls to the TinyURL API, resulting in a significant improvement in user experience through the generation of shorter, more streamlined URL's
-  - Deployed a custom instance of the [CORS Anywhere proxy by Rob--w](https://github.com/Rob--W/cors-anywhere) on a personal endpoint using Railway.app, in order to avoid rate limiting on the main CORS Anywhere deployment and ensure reliable access to the TinyURL API
 - Added feature to save URL with one click (on both desktop and mobile browsers); originally you had to manually highlight and copy the generated URL, which was especially unwieldy to work with on mobile
 - Redeployed site on Github Pages, which lead to greater site stability
   - Github Pages deployment also enabled HTTPS protocol, which greatly improved the security of the application.
@@ -47,12 +45,11 @@ Here are some of the improvements I have made to Smith's original Time Calculato
 ### Basic Usage
 
 1. Enter times into input field, a running total of your total time is calculated. Use the format minutes:seconds for each level.
-2. Click "Save Data as Link" (as highlighted in below screenshot); this will generate three URL's (the original long URL, the shortened URL, and the shortened preview URL). Just clicking on "Save Data as Link" once will save the original long URL to your clipboard, as confirmed by a popup window.
-3. Next click the "copy icon" next to the "Tiny URL" text (as highlighted in below screenshot); this will copy the shortened URL (via TinyURL API) to your clipboard, as confirmed by a popup window.
-   - If you want to be cautious, feel free to click the "copy icon" by the "Preview Tiny URL" text to double check the original URL behind the shortened URL
+2. Click "Save Data as Link" (as highlighted in below screenshot); this will generate a run data output URL that will be copied to your clipboard automatically. As mentioned earlier, all the level times and level names will be saved in the output URL itself, enabling you to easily share your run stats with others.
+3. Depending on how long your output URL is, you may want to use a link shortener service like https://tinyurl.com, https://cutt.ly, etc. so that your output URL takes up less text when sharing with your friends. Although this used to be supported by the Full Game Time Calculator natively via TinyURL API, this is no longer the case (see [Deprecation Notice](#deprecation-notice)).
 
-Example Screenshot:
-![image](https://user-images.githubusercontent.com/82061589/233585877-22d0103b-8ec9-486f-a732-f5915eefe801.png)
+Example Screenshot (Overview):
+![image](./static/overview.PNG)
 
 ### Extra Features
 
@@ -64,6 +61,12 @@ There are some extra configuration options, such as:
 - "X" buttons to automate deleting entire comment fields
 
 Screenshots:
-![image](https://github.com/solderq35/fg-time-calc/assets/82061589/16ceb3a1-cd3e-4d33-88e1-1f02ffd300a4)
+![image](./static/x-buttons.PNG)
 
-![image](https://github.com/solderq35/fg-time-calc/assets/82061589/fe67179c-8844-44df-b574-40ea750d69b5)
+![image](./static/level-select-lazy-input.PNG)
+
+### Deprecation Notice
+
+- This used to feature a build-in link shortener via TinyURL API, but that is no longer the case due to financial reasons
+- **The build-in link shortener may return in the future** via a cheaper vendor / self-hosting (no promises, PR's welcome in the meantime)
+  ![image](./static/old-tinyurl.PNG)
