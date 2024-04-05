@@ -21,7 +21,6 @@
     <link rel="icon" href="https://i.ibb.co/gS97NWt/favicon-5.png" />
     <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
-    <script src="tinyurl.js"></script>
     <title>Full Game Time Calculator</title>
   </head>
 
@@ -99,52 +98,10 @@
                         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
                         type="text/javascript"
                       ></script>
-                      <div class="contentcontainer">
-                        <br />
-                        <input type="text" id="ourl" title="#ourl" />
-                        <small>Tiny URL</small
-                        ><img parent="#ourl" class="copy" /> <br /><br />
-                        <input type="text" id="purl" title="#purl" />
-                        <small>Preview URL</small
-                        ><img parent="#purl" class="copy" />
-                      </div>
                       <script>
-                        var url = $("#url"),
-                          ourl = $("#ourl"),
-                          purl = $("#purl"),
-                          submit = $("#submit2");
+                        submit = $("#submit2");
                         submit.click(() => {
                           saveData();
-                          tinyurl(finalurl, () => {
-                            ourl.val(tinyurl.url);
-                            purl.val(tinyurl.preview);
-                          });
-                        });
-
-                        $("img.copy").click((img) => {
-                          var text = $(
-                            img.target.getAttribute("parent")
-                          ).select()[0].innerText;
-                          console.log(document.getElementById("ourl").value);
-
-                          text = $(
-                            img.target.getAttribute("parent")
-                          )[0].setSelectionRange(0, 99999);
-                          range = document.createRange();
-
-                          try {
-                            alert(
-                              "The Shortened URL was " +
-                                (document.execCommand("copy", false, text)
-                                  ? ""
-                                  : "not ") +
-                                "copied to the clipboard."
-                            );
-                          } catch (e) {
-                            alert(
-                              "The text cannot be copied to the clipboard."
-                            );
-                          }
                         });
                       </script>
                       <br />
@@ -152,9 +109,12 @@
                         type="text"
                         value="Link Will Appear Here"
                         id="myInput"
-                        style="font-size: 16px; text-align: center"
+                        style="
+                          font-size: 16px;
+                          text-align: center;
+                          margin-top: 10px;
+                        "
                       />
-                      <small>Original URL</small>
                       <br />
 
                       <font size="3">
