@@ -754,99 +754,113 @@ function writeLayer(layerID, txt) {
 var fps = 100; // decimal by default
 var baseUrl;
 function initPage() {
-  // Parse url parameters
-  var param, num, val;
-  var queryIndex = window.location.href.indexOf("?");
-  var params = window.location.href.substring(queryIndex + 1).split("&");
-  if (queryIndex < 0) baseUrl = window.location.href; // no '?' found in url
-  else baseUrl = window.location.href.substring(0, queryIndex);
-  if (typeof mode == "undefined") var mode = "add"; // default
-  for (i = 0; i < params.length; i++) {
-    param = params[i].split("=");
-    if (param[0].substr(0, 1) == "t") {
-      // if t1 - t40, then restore it's time value
-      num = param[0].substring(1);
-      if (num != "" && !isNaN(num)) {
-        eval("document.timeCalc.time" + num + '.value="' + param[1] + '"');
-      }
-    } else if (param[0].substr(0, 1) == "c") {
-      // Restore comments
-      num = param[0].substring(1);
-      if (num != "" && !isNaN(num)) {
-        eval(
-          "document.timeCalc.comments" +
-            num +
-            '.value="' +
-            decodeURI(param[1]) +
-            '"'
-        );
-      }
-    } else if (param[0].substr(0, 3) == "f4t") {
-      // Four-value time format
-      num = param[0].substring(3);
-      if (num != "" && !isNaN(num)) {
-        eval("document.timeCalc.time4Format[" + num + "].checked=1");
-      }
-    } else if (param[0].substr(0, 3) == "f3t") {
-      // Three-value time format
-      num = param[0].substring(3);
-      if (num != "" && !isNaN(num)) {
-        eval("document.timeCalc.time3Format[" + num + "].checked=1");
-      }
-    } else if (param[0].substr(0, 2) == "ft") {
-      // Two-value time format
-      num = param[0].substring(2);
-      if (num != "" && !isNaN(num)) {
-        eval("document.timeCalc.timeFormat[" + num + "].checked=1");
-      }
-    } else if (param[0].substr(0, 2) == "fs") {
-      // One-value time format
-      num = param[0].substring(2);
-      if (num != "" && !isNaN(num)) {
-        eval("document.timeCalc.singleFormat[" + num + "].checked=1");
-      }
-    } else if (param[0] == "d") {
-      // Time delimiter
-      eval(
-        'document.timeCalc.timeSeparator.value ="' + decodeURI(param[1]) + '"'
-      );
-    } else if (param[0].substr(0, 1) == "o") {
-      // output format
-      num = param[0].substring(1);
-      if (num != "" && !isNaN(num)) {
-        eval("document.timeCalc.outputFormat[" + num + "].checked=1");
-      }
-    } else if (param[0] == "fps") {
-      // frames/second
-      num = param[1]; // fps
-      if (num != "" && !isNaN(num)) {
-        //if (num == 100) document.timeCalc.fractionType.checked = 1
-
-        //else {
-        //document.timeCalc.fractionType.checked = 0;
-        document.timeCalc.fps.value = num;
-        fps = num;
-        //}
-      }
-    } else if (param[0] == "mode") {
-      // PlusMinusMode
-      num = param[1]; // mode index
-      if (num == 0) {
-        mode = "add";
-        document.timeCalc.plusMinusMode[0].checked = true;
-        document.timeCalc.plusMinusMode[1].checked = false;
-      } else if (num == 1) {
-        mode = "sub";
-        document.timeCalc.plusMinusMode[0].checked = false;
-        document.timeCalc.plusMinusMode[1].checked = true;
-      }
+    // Parse url parameters
+    var param, num, val;
+    var queryIndex = window.location.href.indexOf("?");
+    var params = window.location.href.substring(queryIndex + 1).split("&");
+    if (queryIndex < 0) baseUrl = window.location.href; // no '?' found in url
+    else baseUrl = window.location.href.substring(0, queryIndex);
+    const timeSeparatorInput = document.timeCalc.timeSeparator;
+    if (timeSeparatorInput) {
+        timeSeparatorInput.value = ":";
     }
-  }
 
-  window.focus();
-  addTimes();
-  document.timeCalc.time1.focus();
-  return true;
+    if (typeof mode == "undefined") var mode = "add"; // default
+
+    for (i = 0; i < params.length; i++) {
+        param = params[i].split("=");
+
+        val = param[1] ? decodeURIComponent(param[1].replace(/\+/g, ' ')) : '';
+
+        if (param[0].substr(0, 1) == "t") {
+            // if t1 - t40, then restore it's time value
+            num = param[0].substring(1);
+            if (num != "" && !isNaN(num)) {
+                document.timeCalc["time" + num].value = val;
+            }
+        } else if (param[0].substr(0, 1) == "c") {
+            // Restore comments
+            num = param[0].substring(1);
+            if (num != "" && !isNaN(num)) {
+                document.timeCalc["comments" + num].value = val;
+            }
+        } else if (param[0].substr(0, 3) == "f4t") {
+            // Four-value time format
+            num = param[0].substring(3);
+            if (num != "" && !isNaN(num)) {
+                document.timeCalc.time4Format[num].checked = true;
+            }
+        } else if (param[0].substr(0, 3) == "f3t") {
+            // Three-value time format
+            num = param[0].substring(3);
+            if (num != "" && !isNaN(num)) {
+                document.timeCalc.time3Format[num].checked = true;
+            }
+        } else if (param[0].substr(0, 2) == "ft") {
+            // Two-value time format
+            num = param[0].substring(2);
+            if (num != "" && !isNaN(num)) {
+                document.timeCalc.timeFormat[num].checked = true;
+            }
+        } else if (param[0].substr(0, 2) == "fs") {
+            // One-value time format
+            num = param[0].substring(2);
+            if (num != "" && !isNaN(num)) {
+                document.timeCalc.singleFormat[num].checked = true;
+            }
+        } else if (param[0] == "d") {
+            // Time delimiter
+            let decodedSeparator = val; 
+
+            // Double decode for %3A that occurs in old links
+            if (decodedSeparator === '%3A') {
+                decodedSeparator = decodeURIComponent(decodedSeparator);
+            }
+            if (timeSeparatorInput) {
+                timeSeparatorInput.value = decodedSeparator;
+            }
+        } else if (param[0].substr(0, 1) == "o") {
+            // output format
+            num = param[0].substring(1);
+            if (num != "" && !isNaN(num)) {
+                document.timeCalc.outputFormat[num].checked = true;
+            }
+        } else if (param[0] == "fps") {
+            // frames/second
+            num = val; // fps
+            if (num != "" && !isNaN(num)) {
+                //if (num == 100) document.timeCalc.fractionType.checked = 1
+                //else {
+                //document.timeCalc.fractionType.checked = 0;
+                document.timeCalc.fps.value = num;
+                fps = num;
+                //}
+            }
+        } else if (param[0] == "mode") {
+            // PlusMinusMode
+            num = val; // mode index
+            if (num == 0) {
+                mode = "add";
+                document.timeCalc.plusMinusMode[0].checked = true;
+                document.timeCalc.plusMinusMode[1].checked = false;
+            } else if (num == 1) {
+                mode = "sub";
+                document.timeCalc.plusMinusMode[0].checked = false;
+                document.timeCalc.plusMinusMode[1].checked = true;
+            }
+        }
+    }
+
+    // event listeners as addTimes was removed from timeSeparator in the html
+    if (timeSeparatorInput) {
+        timeSeparatorInput.addEventListener('change', addTimes);
+        timeSeparatorInput.addEventListener('input', addTimes);
+    }
+
+    window.focus();
+    addTimes();
+    document.timeCalc.time1.focus();
+    return true;
 }
 
 function lazyInputDot(field) {
